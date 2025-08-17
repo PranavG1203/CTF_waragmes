@@ -127,8 +127,8 @@ def loader_animation():
 
 def pull_level(level):
     global levels_pulled
-    tag = f"warg{level}"
-    docker_image = f"ghcr.io/walchand-linux-users-group/wildwarrior44/wargame_finals:{tag}"
+    tag = f"war{level}"
+    docker_image = f"ghcr.io/avadhutmali/linuxdiary6.0-wargames-level:{tag}"
     for attempts in range(3):
         get_level = f"docker pull {docker_image} > /dev/null 2>&1"
         exit_status = subprocess.call(get_level, shell=True)
